@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // Changed from '/tame3723/' to relative './' so assets resolve correctly anywhere!
+  base: '/tame3723/', // Set back to absolute subpath for solid asset routing
   build: {
     outDir: 'dist',
     sourcemap: false,
