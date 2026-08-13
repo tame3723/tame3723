@@ -5,9 +5,9 @@ export const projectsData: IProject[] = [
     id: "techsphere-analytics",
     name: "TechSphere Analytics",
     category: "Large-Scale Job Market & Technology Skill Analysis",
-    shortDescription: "A large-scale data engineering and NLP project analyzing 1.3M+ job postings to discover technology demand trends and domain skill clusters.",
-    tags: ["Python", "Pandas", "NumPy", "NLP", "Data Analysis", "Data Visualization", "Matplotlib"],
-    githubUrl: "https://github.com/tame3723/techsphere-analytics",
+    shortDescription: "A large-scale data science and NLP project analyzing 1.3M+ job postings to identify technology demand, computer-science domains, skill trends, and emerging opportunities across the job market.",
+    tags: ["Python", "Pandas", "NumPy", "NLP", "Data Analysis", "Data Visualization", "Scikit-learn"],
+    githubUrl: "https://github.com/tame3723",
     featured: true,
     problem: "Understanding which skills are in demand in the fast-moving tech market is difficult due to noisy, unstructured job posting data.",
     motivation: "Designing a data pipeline to turn raw job descriptions into structured intelligence helps developers and institutions map curriculum alignment to live industry needs.",
@@ -17,7 +17,7 @@ export const projectsData: IProject[] = [
       "Handling variations in skill descriptions and extracting terms accurately without false positives."
     ],
     results: [
-      { metricName: "Dataset Volume", metricValue: "1.3M+ Postings" },
+      { metricName: "Dataset Volume", metricValue: "1,338,988 records" },
       { metricName: "Accuracy Score", metricValue: "94% Domain Classification" },
       { metricName: "Processing Time", metricValue: "under 3 minutes" }
     ],
@@ -25,42 +25,19 @@ export const projectsData: IProject[] = [
     futureImprovements: "I plan to train a custom BERT model to classify job roles and implement a live scraping pipeline to keep the metrics fresh."
   },
   {
-    id: "edupredict-ai",
-    name: "EduPredict AI",
-    category: "Machine Learning / Full-Stack ML",
-    shortDescription: "An end-to-end predictive software pipeline mapping student performance indicators and retention likelihoods using gradient boosting algorithms.",
-    tags: ["Python", "XGBoost", "CatBoost", "LightGBM", "Flask", "React", "TypeScript"],
-    githubUrl: "https://github.com/tame3723/edupredict-ai",
-    featured: false,
-    problem: "Educational institutions struggle to identify at-risk students early due to fragmented academic metrics and delayed manual intervention protocols.",
-    motivation: "By automating risk mapping with high-accuracy predictive pipelines, administrators can execute early-stage counseling, directly boosting overall graduation rates.",
-    solution: "A unified system that processes raw demographic and performance data, trains highly accurate gradient boosting ensembles, and serves real-time predictions through a lightweight Flask API to a sleek React web app.",
-    challenges: [
-      "Handling class imbalance within student failure records without introducing synthetic bias.",
-      "Optimizing response latencies of the gradient boosting model ensemble in a real-time web interface."
-    ],
-    results: [
-      { metricName: "Dataset Volume", metricValue: "Over 5,000 records" },
-      { metricName: "Prediction F1-Score", metricValue: "91%" },
-      { metricName: "API Query Latency", metricValue: "under 45ms" }
-    ],
-    lessonsLearned: "Developing this end-to-end model pipeline taught me the immense importance of feature engineering, hyperparameter tuning, and how to seamlessly bridge Python ML scripts with interactive React user interfaces.",
-    futureImprovements: "I plan to integrate native OAuth2 controls and add continuous pipelines that automatically retrain models when new academic records are imported."
-  },
-  {
     id: "uudms",
     name: "UUDMS (Utility Data Management System)",
     category: "Software Engineering / Data Management",
     shortDescription: "A secure, role-based data management application developed to optimize search and export processes during the UPCL technical internship.",
     tags: ["Django", "SQLite", "Bootstrap", "Python", "Role-Based Access"],
-    githubUrl: "https://github.com/tame3723/uudms",
+    githubUrl: "https://github.com/tame3723",
     featured: false,
-    problem: "Operations faced administrative overhead when querying, validating, and updating high-frequency utility assets across split silos.",
+    problem: "Operations faced administrative overhead when querying, validating, and updating utility assets across split silos manually.",
     motivation: "Creating a secure, singular platform dramatically reduces file retrieval time and secures critical technical infrastructure inventory data.",
     solution: "Developed a Django-based web interface integrated with clean SQLite tables, customized search indexing, dynamic CSV/PDF export tools, and hierarchical role privileges.",
     challenges: [
       "Implementing strict role-based access controls to isolate editing permissions to administrators while allowing general queries for technical staff.",
-      "Optimizing query performance for asset lookups over massive inventory databases."
+      "Optimizing query performance for asset lookups over database configurations."
     ],
     results: [
       { metricName: "Lookup Speedup", metricValue: "60% faster search retrieval" },
@@ -74,9 +51,9 @@ export const projectsData: IProject[] = [
     id: "algorithm-performance-analyzer",
     name: "Algorithm Performance Analyzer",
     category: "Algorithms / Software Engineering",
-    shortDescription: "A technical evaluation tool designed to execute and visually profile computational complexity curves across 15+ sorting and searching algorithms.",
-    tags: ["Python", "NumPy", "Matplotlib", "Algorithm Design", "Computational Complexity"],
-    githubUrl: "https://github.com/tame3723/algo-analyzer",
+    shortDescription: "An interactive platform designed to execute and visually profile computational complexity curves across 15+ sorting and searching algorithms.",
+    tags: ["Python", "Algorithms", "Data Structures", "Data Visualization"],
+    githubUrl: "https://github.com/tame3723",
     featured: false,
     problem: "Theoretical Big-O analysis can feel abstract and fail to account for real-world memory allocations, compiler optimizations, and CPU architecture bottlenecks.",
     motivation: "A physical benchmarking system provides actual execution statistics, giving engineers empirical data to make critical system architecture choices.",
@@ -98,8 +75,8 @@ export const projectsData: IProject[] = [
     name: "Graph Coloring Lab",
     category: "Algorithms / Graph Theory",
     shortDescription: "An interactive visualization platform implementing and assessing heuristic-based graph coloring algorithms.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Graph Theory", "Heuristic Search"],
-    githubUrl: "https://github.com/tame3723/graph-coloring",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Graph Theory", "D3.js"],
+    githubUrl: "https://github.com/tame3723",
     featured: false,
     problem: "Graph coloring is an NP-complete problem that is difficult to visually comprehend and optimize using standard static command-line tools.",
     motivation: "An interactive, web-based tool visually demonstrates how backtracking and Welsh-Powell heuristics behave in real-time, making it an excellent resource for network routing optimization.",

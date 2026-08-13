@@ -2,31 +2,31 @@ import { ISkillGroup } from './types';
 
 export const skillsData: ISkillGroup[] = [
   {
-    category: "Programming Languages",
+    category: "PROGRAMMING",
     skills: ["Python", "C", "Java", "SQL", "R"]
   },
   {
-    category: "Data Science & Analysis",
-    skills: ["Pandas", "NumPy", "Scikit-learn", "Data Analysis", "Data Visualization", "NLP"]
+    category: "DATA SCIENCE & ANALYTICS",
+    skills: ["Pandas", "NumPy", "Scikit-learn", "Data Cleaning", "Exploratory Data Analysis", "Statistical Analysis", "Data Visualization", "Feature Engineering"]
   },
   {
-    category: "Machine Learning",
-    skills: ["Supervised Learning", "Ensemble Methods", "XGBoost", "CatBoost", "LightGBM", "Model Evaluation"]
+    category: "MACHINE LEARNING",
+    skills: ["Supervised Learning", "Ensemble Methods", "Model Evaluation", "XGBoost", "CatBoost", "LightGBM"]
   },
   {
-    category: "Web & Application Dev",
+    category: "SOFTWARE DEVELOPMENT",
     skills: ["Flask", "React", "TypeScript", "Vite", "Tkinter", "PyQt5"]
   },
   {
-    category: "Databases",
+    category: "DATABASES",
     skills: ["MySQL", "SQLite", "SQLAlchemy"]
   },
   {
-    category: "CS Foundations",
-    skills: ["Data Structures & Algorithms", "DBMS", "Object-Oriented Programming", "Graph Algorithms"]
+    category: "CS FOUNDATIONS",
+    skills: ["Data Structures & Algorithms", "Object-Oriented Programming", "DBMS", "Graph Algorithms"]
   },
   {
-    category: "Developer Tools",
-    skills: ["Git", "GitHub", "Node/NPM"]
+    category: "DEVELOPER TOOLS",
+    skills: ["Git", "GitHub", "Node.js / NPM"]
   }
 ];

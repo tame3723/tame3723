@@ -17,16 +17,9 @@ export const achievementsData: IAchievement[] = [
   },
   {
     id: "seg-upes-committee",
-    title: "SEG UPES Core Committee Officer",
+    title: "SEG UPES Core Committee Involvement",
     issuer: "Society of Exploration Geophysicists (SEG) UPES Chapter",
-    description: "Active core committee leadership officer managing collaborative projects, technical workshops, and student outreach campaigns.",
-    category: "leadership"
-  },
-  {
-    id: "srijan-lead",
-    title: "Social Internship Group Lead",
-    issuer: "UPES / BUDS NGO",
-    description: "Successfully coordinated team tasks, digital-literacy drives, and handled data records of 349 children during social internship.",
+    description: "Contributed actively to core committee operations, technical workshops, geophysical resource setups, and student coordination campaigns.",
     category: "leadership"
   }
 ];

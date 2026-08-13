@@ -13,7 +13,7 @@
     overflow-x: hidden;
   }
 
-  /* Prevent eye fatigue with light-mode text selection colors */
+  /* Eye-friendly selection highlight color */
   ::selection {
     @apply bg-brand-accent/20 text-brand-accent;
   }
@@ -33,29 +33,21 @@
   }
 }
 
-/* Custom Soothing Background Floating Animations */
+/* Slower, subtle ambient background floats (SRS Section 16 compliant) */
 @keyframes float-slow {
   0% { transform: translateY(0px) translateX(0px); }
-  50% { transform: translateY(-15px) translateX(10px); }
+  50% { transform: translateY(-8px) translateX(5px); }
   100% { transform: translateY(0px) translateX(0px); }
 }
 @keyframes float-medium {
   0% { transform: translateY(0px) translateX(0px); }
-  50% { transform: translateY(12px) translateX(-12px); }
-  100% { transform: translateY(0px) translateX(0px); }
-}
-@keyframes float-fast {
-  0% { transform: translateY(0px) translateX(0px); }
-  50% { transform: translateY(-8px) translateX(-5px); }
+  50% { transform: translateY(6px) translateX(-6px); }
   100% { transform: translateY(0px) translateX(0px); }
 }
 
 .animate-float-slow {
-  animation: float-slow 14s ease-in-out infinite;
+  animation: float-slow 18s ease-in-out infinite;
 }
 .animate-float-medium {
-  animation: float-medium 9s ease-in-out infinite;
-}
-.animate-float-fast {
-  animation: float-fast 6s ease-in-out infinite;
+  animation: float-medium 12s ease-in-out infinite;
 }

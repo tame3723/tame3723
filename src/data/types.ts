@@ -44,17 +44,6 @@ export interface IEducation {
   currentStage: string;
 }
 
-export interface ISgpaRecord {
-  semester: string;
-  sgpa: string;
-  context: string;
-}
-
-export interface IEducationExtended extends IEducation {
-  sgpas: ISgpaRecord[];
-  coursework: string[];
-}
-
 export interface IAchievement {
   id: string;
   title: string;

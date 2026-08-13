@@ -6,13 +6,13 @@ import { educationData } from '../data/education';
 export const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-transparent">
-      {/* Soothing background radial glows */}
+      {/* Background ambient radial glows */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-brand-accent/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-brand-accentSecondary/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto px-6 md:px-12 text-center z-10 animate-fade-in">
         
-        {/* Soothing Context Badge */}
+        {/* Soothing Minimal Context Badge */}
         <div className="inline-flex items-center gap-2 bg-brand-surface border border-brand-border px-4 py-1.5 rounded-full text-xs text-brand-textMuted mb-8 shadow-sm">
           <span className="h-1.5 w-1.5 bg-brand-accent rounded-full animate-pulse" />
           <span className="font-semibold text-brand-textPrimary">UPES · Class of {educationData.graduationYear}</span>
@@ -32,11 +32,11 @@ export const Hero: React.FC = () => {
         </h1>
         
         <p className="text-lg sm:text-xl md:text-2xl text-brand-accent font-semibold tracking-wide mb-6">
-          Data Science Student & Software Builder
+          Data Science Student • Data Analyst • Software Builder
         </p>
 
         <p className="max-w-2xl mx-auto text-sm sm:text-base text-brand-textSecondary leading-relaxed mb-10">
-          Building data-driven software systems, machine learning pipelines, and practical engineering projects with a focus on real-world scalability and structural depth.
+          Building data-driven applications, analytical systems, and practical software solutions with a focus on scalable engineering and meaningful real-world impact.
         </p>
 
         {/* Action CTAs */}
@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
             <span>GitHub</span>
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/tanishk-sharma-235a89324/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-brand-accent transition-colors duration-200 flex items-center gap-2 text-sm font-medium"
@@ -71,7 +71,7 @@ export const Hero: React.FC = () => {
             <span>LinkedIn</span>
           </a>
           <a 
-            href="mailto:example@gmail.com" 
+            href="mailto:Tanishk.16061@stu.upes.ac.in" 
             className="hover:text-brand-accent transition-colors duration-200 flex items-center gap-2 text-sm font-medium"
           >
             <Mail size={18} />
@@ -80,7 +80,7 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Scroll down indicator */}
+      {/* Scroll down mouse */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-brand-textMuted/40 animate-bounce">
         <span className="text-[10px] uppercase tracking-widest font-semibold">Scroll Down</span>
         <ArrowDown size={14} />
