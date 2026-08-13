@@ -6,7 +6,7 @@ export interface IProject {
   tags: string[];
   githubUrl: string;
   liveUrl?: string;
-  featured: boolean; // Flag to render with increased layout emphasis
+  featured: boolean;
   problem: string;
   motivation: string;
   solution: string;
@@ -42,6 +42,17 @@ export interface IEducation {
   graduationYear: string;
   cgpa: string;
   currentStage: string;
+}
+
+export interface ISgpaRecord {
+  semester: string;
+  sgpa: string;
+  context: string;
+}
+
+export interface IEducationExtended extends IEducation {
+  sgpas: ISgpaRecord[];
+  coursework: string[];
 }
 
 export interface IAchievement {

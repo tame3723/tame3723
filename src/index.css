@@ -5,15 +5,20 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   body {
-    @apply bg-brand-background text-brand-textPrimary font-sans antialiased selection:bg-brand-accent selection:text-brand-background;
+    @apply bg-brand-background text-brand-textSecondary font-sans antialiased;
     overflow-x: hidden;
   }
 
-  /* Custom subtle dark scrollbar */
+  /* Prevent eye fatigue with light-mode text selection colors */
+  ::selection {
+    @apply bg-brand-accent/20 text-brand-accent;
+  }
+
+  /* Custom subtle light-mode scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -26,4 +31,31 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-brand-textMuted/30;
   }
+}
+
+/* Custom Soothing Background Floating Animations */
+@keyframes float-slow {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-15px) translateX(10px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+@keyframes float-medium {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(12px) translateX(-12px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+@keyframes float-fast {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-8px) translateX(-5px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+.animate-float-slow {
+  animation: float-slow 14s ease-in-out infinite;
+}
+.animate-float-medium {
+  animation: float-medium 9s ease-in-out infinite;
+}
+.animate-float-fast {
+  animation: float-fast 6s ease-in-out infinite;
 }

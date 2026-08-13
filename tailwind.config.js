@@ -4,26 +4,30 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class', // Configured system-aware or dark-by-default
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         brand: {
-          background: '#0B0F19', // Sleek near-black/dark slate
-          surface: '#111827',    // Slightly lighter card/surface color
-          cardHover: '#1F2937',  // Interactive state border/fill color
-          textPrimary: '#F9FAFB',// High contrast off-white
-          textMuted: '#9CA3AF',  // Sophisticated medium gray
-          accent: '#10B981',     // Restrained primary Emerald accent
-          accentHover: '#059669',// Slightly deeper shade for hover effects
-          border: '#1F2937'      // Thin elegant divider/border color
+          background: '#F1F5F9', // Soothing, warm Slate gray
+          surface: '#FFFFFF',    // Crisp white cards
+          card: '#FFFFFF',
+          cardHover: '#F1F5F9',  // Micro-interaction highlight background
+          textPrimary: '#0F172A',// High-contrast deep Slate for headers
+          textSecondary: '#334155',// Soothing, highly readable paragraph text
+          textMuted: '#64748B',  // Calming medium gray for captions/dates
+          accent: '#2563EB',     // Soothing primary Royal Blue
+          accentHover: '#1D4ED8',// Deepened hover state Blue
+          accentSecondary: '#0891B2', // Cyan helper highlights
+          border: '#E2E8F0',     // Low-contrast clean dividing lines
+          borderHover: '#CBD5E1',
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        accentGlow: '0 0 20px rgba(16, 185, 129, 0.15)',
+        accentGlow: '0 4px 20px rgba(37, 99, 235, 0.08)',
       }
     },
   },

@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Github, ExternalLink, Cpu, Database, AlertCircle, Award, BookOpen, Lightbulb } from 'lucide-react';
 import { projectsData } from '../data/projects';
-import { SectionHeading } from '../components/SectionHeading';
 import { Button } from '../components/Button';
 
 export const ProjectDetails: React.FC = () => {
@@ -20,7 +19,7 @@ export const ProjectDetails: React.FC = () => {
         <p className="text-brand-textMuted text-sm mb-6 max-w-md">
           The project ID you are attempting to view might have been moved, updated, or is currently undergoing maintenance.
         </p>
-        <Button variant="primary" as="a" href="/#/">
+        <Button variant="primary" as="a" href="#/">
           Back to Portfolio Home
         </Button>
       </div>
@@ -31,14 +30,14 @@ export const ProjectDetails: React.FC = () => {
     <article className="min-h-screen bg-brand-background pt-28 pb-20">
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         
-        {/* Back Navigation Link */}
-        <Link 
-          to="/#/#work" 
+        {/* Back Navigation Link - Clean Relative Path */}
+        <a 
+          href="#/#work" 
           className="inline-flex items-center gap-2 text-xs font-semibold text-brand-accent hover:text-brand-textPrimary tracking-wide uppercase transition-colors mb-8 group"
         >
           <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
           <span>Back to Selected Work</span>
-        </Link>
+        </a>
 
         {/* 1. Header Block */}
         <header className="mb-12 border-b border-brand-border/40 pb-10">
@@ -118,7 +117,7 @@ export const ProjectDetails: React.FC = () => {
               {project.solution}
             </p>
 
-            {/* Programmatic visual text-flow diagram matching Section 19 of SRS */}
+            {/* Logical system diagram flow */}
             <div className="pt-6 border-t border-brand-border/40">
               <p className="text-xs uppercase tracking-wider font-semibold text-brand-textMuted mb-4 text-center">
                 Logical System Flow & Data Pipeline
@@ -203,13 +202,13 @@ export const ProjectDetails: React.FC = () => {
 
         {/* Bottom Navigation */}
         <footer className="mt-16 pt-8 border-t border-brand-border/40 text-center">
-          <Link 
-            to="/#/#work" 
+          <a 
+            href="#/#work" 
             className="inline-flex items-center gap-2 text-xs font-semibold text-brand-accent hover:text-brand-textPrimary tracking-wide uppercase transition-colors group"
           >
             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
             <span>Return to Portfolio Grid</span>
-          </Link>
+          </a>
         </footer>
 
       </div>

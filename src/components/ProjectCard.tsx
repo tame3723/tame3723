@@ -8,13 +8,13 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className={`group relative bg-brand-surface rounded-lg border transition-all duration-300 hover:border-brand-accent/40 hover:-translate-y-1 ${
+    <div className={`group relative bg-brand-surface rounded-lg border transition-all duration-300 hover:border-brand-borderHover hover:-translate-y-1 ${
       project.featured 
-        ? 'border-brand-accent/20 col-span-1 lg:col-span-2 p-6 md:p-8 hover:shadow-accentGlow' 
-        : 'border-brand-border p-6'
+        ? 'border-brand-accent/40 col-span-1 lg:col-span-2 p-6 md:p-8 hover:shadow-md bg-gradient-to-tr from-brand-surface to-brand-background/40' 
+        : 'border-brand-border p-6 hover:shadow-sm'
     }`}>
       {/* Category Tag */}
-      <span className="text-[10px] uppercase tracking-wider font-semibold text-brand-accent bg-brand-accent/10 px-2.5 py-1 rounded-full">
+      <span className="text-[10px] uppercase tracking-wider font-semibold text-brand-accent bg-brand-accent/10 px-2.5 py-1 rounded-full border border-brand-accent/10">
         {project.category}
       </span>
 
@@ -26,7 +26,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </h3>
 
       {/* Description */}
-      <p className="text-brand-textMuted text-sm leading-relaxed mb-6">
+      <p className="text-brand-textSecondary text-sm leading-relaxed mb-6">
         {project.shortDescription}
       </p>
 
@@ -35,7 +35,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         {project.tags.map((tag) => (
           <span 
             key={tag} 
-            className="text-xs bg-brand-background text-brand-textMuted border border-brand-border px-2 py-0.5 rounded"
+            className="text-xs bg-brand-background text-brand-textSecondary border border-brand-border px-2.5 py-1 rounded font-medium"
           >
             {tag}
           </span>
@@ -43,10 +43,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </div>
 
       {/* Dynamic Link Interactions */}
-      <div className="flex items-center justify-between mt-auto pt-4 border-t border-brand-border/45">
+      <div className="flex items-center justify-between mt-auto pt-4 border-t border-brand-border">
         <a 
-          href={`/#/project/${project.id}`} 
-          className="inline-flex items-center gap-1.5 text-xs text-brand-accent hover:text-brand-textPrimary font-semibold transition-colors"
+          href={`#/project/${project.id}`} 
+          className="inline-flex items-center gap-1.5 text-xs text-brand-accent hover:text-brand-accentHover font-semibold transition-colors"
         >
           <span>Explore Architecture Case Study</span>
           <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

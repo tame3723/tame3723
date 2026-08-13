@@ -14,12 +14,12 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Work', href: '/#/#work' },
-    { label: 'Experience', href: '/#/#experience' },
-    { label: 'About', href: '/#/#about' },
-    { label: 'Skills', href: '/#/#skills' },
-    { label: 'Education', href: '/#/#education' },
-    { label: 'Contact', href: '/#/#contact' }
+    { label: 'Work', href: '#/#work' },
+    { label: 'Experience', href: '#/#experience' },
+    { label: 'About', href: '#/#about' },
+    { label: 'Skills', href: '#/#skills' },
+    { label: 'Education', href: '#/#education' },
+    { label: 'Contact', href: '#/#contact' }
   ];
 
   return (
@@ -27,8 +27,8 @@ export const Navbar: React.FC = () => {
       isScrolled ? 'bg-brand-background/80 backdrop-blur-md border-b border-brand-border py-4' : 'bg-transparent py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Monogram/Logo */}
-        <a href="/#/" className="text-lg font-bold tracking-wider text-brand-textPrimary group flex items-center gap-2">
+        {/* Monogram/Logo - Relative Hash */}
+        <a href="#/" className="text-lg font-bold tracking-wider text-brand-textPrimary group flex items-center gap-2">
           <span className="text-brand-accent group-hover:text-brand-textPrimary transition-colors">&lt;</span>
           TS
           <span className="text-brand-accent group-hover:text-brand-textPrimary transition-colors">/&gt;</span>
@@ -56,7 +56,8 @@ export const Navbar: React.FC = () => {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-brand-textMuted hover:text-brand-accent transition-colors">
               <Linkedin size={18} />
             </a>
-            <a href="/resume.pdf" download="Tanishk_Sharma_Resume.pdf" className="inline-flex items-center gap-1.5 text-xs border border-brand-accent/20 hover:border-brand-accent hover:bg-brand-accent/5 px-3 py-1.5 rounded text-brand-accent transition-all">
+            {/* Relative resume resource target */}
+            <a href="resume.pdf" download="Tanishk_Sharma_Resume.pdf" className="inline-flex items-center gap-1.5 text-xs border border-brand-accent/20 hover:border-brand-accent hover:bg-brand-accent/5 px-3 py-1.5 rounded text-brand-accent transition-all">
               <FileText size={14} />
               <span>Resume</span>
             </a>
@@ -99,8 +100,9 @@ export const Navbar: React.FC = () => {
                 <Linkedin size={20} /> <span className="text-sm">LinkedIn</span>
               </a>
             </div>
+            {/* Relative resume resource target */}
             <a 
-              href="/resume.pdf" 
+              href="resume.pdf" 
               download="Tanishk_Sharma_Resume.pdf"
               className="text-center bg-brand-surface border border-brand-accent/30 text-brand-accent py-3 rounded-md font-semibold text-sm hover:bg-brand-accent hover:text-brand-background transition-all"
             >

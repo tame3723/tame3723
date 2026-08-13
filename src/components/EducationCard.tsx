@@ -1,49 +1,56 @@
 import React from 'react';
-import { GraduationCap, Award, BookOpen } from 'lucide-react';
-import { IEducation } from '../data/types';
+import { GraduationCap, Award, Calendar, ChevronRight } from 'lucide-react';
+import { IEducationExtended } from '../data/types';
 
 interface EducationCardProps {
-  edu: IEducation;
+  edu: IEducationExtended;
 }
 
 export const EducationCard: React.FC<EducationCardProps> = ({ edu }) => {
   return (
-    <div className="bg-brand-surface border border-brand-border p-6 md:p-8 rounded-lg">
-      <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
-        <div>
-          <h3 className="font-bold text-lg md:text-xl text-brand-textPrimary flex items-center gap-2.5">
-            <GraduationCap size={20} className="text-brand-accent" />
-            {edu.institution}
-          </h3>
-          <p className="text-brand-textMuted mt-1 font-medium">{edu.degree}</p>
-        </div>
-        <div className="text-xs text-brand-accent bg-brand-accent/10 px-3 py-1.5 rounded-full font-semibold border border-brand-accent/20 self-start md:self-auto">
-          Expected Graduation: {edu.graduationYear}
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-brand-border/40 pt-6">
-        <div className="bg-brand-background/45 border border-brand-border p-4 rounded-md">
-          <p className="text-xs text-brand-textMuted uppercase tracking-wider mb-1 font-semibold flex items-center gap-1.5">
-            <BookOpen size={12} className="text-brand-accent" /> Specialization
-          </p>
-          <p className="text-sm font-semibold text-brand-textPrimary">{edu.specialization}</p>
-        </div>
-
-        {edu.minor && (
-          <div className="bg-brand-background/45 border border-brand-border p-4 rounded-md">
-            <p className="text-xs text-brand-textMuted uppercase tracking-wider mb-1 font-semibold flex items-center gap-1.5">
-              <Award size={12} className="text-brand-accent" /> Minor Focus
-            </p>
-            <p className="text-sm font-semibold text-brand-textPrimary">{edu.minor}</p>
+    <div className="bg-brand-surface border border-brand-border p-6 md:p-8 rounded-xl shadow-sm hover:border-brand-borderHover transition-all duration-300">
+      <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
+        {/* Academic Major */}
+        <div className="space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 bg-brand-accent/10 rounded-lg text-brand-accent">
+              <GraduationCap size={24} />
+            </div>
+            <div>
+              <h3 className="font-bold text-lg md:text-xl text-brand-textPrimary">
+                {edu.institution}
+              </h3>
+              <p className="text-brand-textSecondary font-medium text-sm mt-0.5">{edu.degree}</p>
+            </div>
           </div>
-        )}
 
-        <div className="bg-brand-background/45 border border-brand-border p-4 rounded-md">
-          <p className="text-xs text-brand-textMuted uppercase tracking-wider mb-1 font-semibold flex items-center gap-1.5">
-            <Award size={12} className="text-brand-accent" /> Verified CGPA
-          </p>
-          <p className="text-sm font-semibold text-brand-accent text-lg">{edu.cgpa}</p>
+          {/* Academic Highlights Details */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-2 pt-2">
+            <div className="flex items-center gap-2 text-sm text-brand-textSecondary">
+              <ChevronRight size={16} className="text-brand-accent" />
+              <span>Specialization: <strong className="text-brand-textPrimary font-semibold">{edu.specialization}</strong></span>
+            </div>
+            {edu.minor && (
+              <div className="flex items-center gap-2 text-sm text-brand-textSecondary">
+                <ChevronRight size={16} className="text-brand-accent" />
+                <span>Minor: <strong className="text-brand-textPrimary font-semibold">{edu.minor}</strong></span>
+              </div>
+            )}
+            <div className="flex items-center gap-2 text-sm text-brand-textSecondary">
+              <ChevronRight size={16} className="text-brand-accent" />
+              <span>Current Status: <strong className="text-brand-textPrimary font-semibold">{edu.currentStage}</strong></span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-brand-textSecondary">
+              <ChevronRight size={16} className="text-brand-accent" />
+              <span>Verified Standing: <strong className="text-brand-accent font-bold">{edu.cgpa} CGPA</strong></span>
+            </div>
+          </div>
+        </div>
+
+        {/* Expected Graduation Badge */}
+        <div className="inline-flex items-center gap-2 text-xs text-brand-accent bg-brand-accent/10 px-3.5 py-2 rounded-full font-semibold border border-brand-accent/20 self-start md:self-auto font-mono">
+          <Calendar size={12} />
+          <span>Expected Graduation: {edu.graduationYear}</span>
         </div>
       </div>
     </div>

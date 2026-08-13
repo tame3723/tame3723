@@ -2,13 +2,36 @@ import { IProject } from './types';
 
 export const projectsData: IProject[] = [
   {
+    id: "techsphere-analytics",
+    name: "TechSphere Analytics",
+    category: "Large-Scale Job Market & Technology Skill Analysis",
+    shortDescription: "A large-scale data engineering and NLP project analyzing 1.3M+ job postings to discover technology demand trends and domain skill clusters.",
+    tags: ["Python", "Pandas", "NumPy", "NLP", "Data Analysis", "Data Visualization", "Matplotlib"],
+    githubUrl: "https://github.com/tame3723/techsphere-analytics",
+    featured: true,
+    problem: "Understanding which skills are in demand in the fast-moving tech market is difficult due to noisy, unstructured job posting data.",
+    motivation: "Designing a data pipeline to turn raw job descriptions into structured intelligence helps developers and institutions map curriculum alignment to live industry needs.",
+    solution: "Classified CS roles into Software Engineering, Data Science, DevOps, Cybersecurity, Web Development, AI/ML, and Cloud domains. Engineered a custom rule-based NLP pipeline utilizing domain-specific skill dictionaries to identify technical skills from job descriptions, plotting density trends and skill linkages.",
+    challenges: [
+      "Efficiently cleaning and validating 1.3M+ job postings on standard computer configurations.",
+      "Handling variations in skill descriptions and extracting terms accurately without false positives."
+    ],
+    results: [
+      { metricName: "Dataset Volume", metricValue: "1.3M+ Postings" },
+      { metricName: "Accuracy Score", metricValue: "94% Domain Classification" },
+      { metricName: "Processing Time", metricValue: "under 3 minutes" }
+    ],
+    lessonsLearned: "I learned how to construct low-overhead NLP parsing rules, handle massive datasets with chunking structures in Pandas, and communicate complex statistics visually.",
+    futureImprovements: "I plan to train a custom BERT model to classify job roles and implement a live scraping pipeline to keep the metrics fresh."
+  },
+  {
     id: "edupredict-ai",
     name: "EduPredict AI",
     category: "Machine Learning / Full-Stack ML",
     shortDescription: "An end-to-end predictive software pipeline mapping student performance indicators and retention likelihoods using gradient boosting algorithms.",
     tags: ["Python", "XGBoost", "CatBoost", "LightGBM", "Flask", "React", "TypeScript"],
     githubUrl: "https://github.com/tame3723/edupredict-ai",
-    featured: true, // Elevates visual display on homepage grid
+    featured: false,
     problem: "Educational institutions struggle to identify at-risk students early due to fragmented academic metrics and delayed manual intervention protocols.",
     motivation: "By automating risk mapping with high-accuracy predictive pipelines, administrators can execute early-stage counseling, directly boosting overall graduation rates.",
     solution: "A unified system that processes raw demographic and performance data, trains highly accurate gradient boosting ensembles, and serves real-time predictions through a lightweight Flask API to a sleek React web app.",
@@ -17,7 +40,7 @@ export const projectsData: IProject[] = [
       "Optimizing response latencies of the gradient boosting model ensemble in a real-time web interface."
     ],
     results: [
-      { metricName: "Dataset Volume", metricValue: "Over 5,000 student records" },
+      { metricName: "Dataset Volume", metricValue: "Over 5,000 records" },
       { metricName: "Prediction F1-Score", metricValue: "91%" },
       { metricName: "API Query Latency", metricValue: "under 45ms" }
     ],
@@ -32,7 +55,7 @@ export const projectsData: IProject[] = [
     tags: ["Django", "SQLite", "Bootstrap", "Python", "Role-Based Access"],
     githubUrl: "https://github.com/tame3723/uudms",
     featured: false,
-    problem: "Internship operations faced administrative overhead when querying, validating, and updating high-frequency utility assets across split silos.",
+    problem: "Operations faced administrative overhead when querying, validating, and updating high-frequency utility assets across split silos.",
     motivation: "Creating a secure, singular platform dramatically reduces file retrieval time and secures critical technical infrastructure inventory data.",
     solution: "Developed a Django-based web interface integrated with clean SQLite tables, customized search indexing, dynamic CSV/PDF export tools, and hierarchical role privileges.",
     challenges: [
@@ -51,7 +74,7 @@ export const projectsData: IProject[] = [
     id: "algorithm-performance-analyzer",
     name: "Algorithm Performance Analyzer",
     category: "Algorithms / Software Engineering",
-    shortDescription: "A technical evaluation tool designed to execute and visually profile computational complexity curves across diverse algorithms.",
+    shortDescription: "A technical evaluation tool designed to execute and visually profile computational complexity curves across 15+ sorting and searching algorithms.",
     tags: ["Python", "NumPy", "Matplotlib", "Algorithm Design", "Computational Complexity"],
     githubUrl: "https://github.com/tame3723/algo-analyzer",
     featured: false,
@@ -63,7 +86,7 @@ export const projectsData: IProject[] = [
       "Efficiently managing large memory overhead during worst-case visual tracking runs."
     ],
     results: [
-      { metricName: "Input Sizes Tested", metricValue: "100 to 100,000 integers" },
+      { metricName: "Input Sizes Tested", metricValue: "100 to 100,000 items" },
       { metricName: "Metrics Captured", metricValue: "Time (μs) & Heap Memory (KB)" },
       { metricName: "Charting Engine", metricValue: "Dual-axis Real-time Profiling" }
     ],
