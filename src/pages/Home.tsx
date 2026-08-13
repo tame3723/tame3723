@@ -5,14 +5,13 @@ import { ProjectGrid } from '../components/ProjectGrid';
 import { ExperienceCard } from '../components/ExperienceCard';
 import { SkillGroup } from '../components/SkillGroup';
 import { EducationCard } from '../components/EducationCard';
-import { Button } from '../components/Button';
 import { AnimatedBackground } from '../components/AnimatedBackground';
 import { projectsData } from '../data/projects';
 import { experienceData } from '../data/experience';
 import { skillsData } from '../data/skills';
 import { educationData } from '../data/education';
 import { achievementsData } from '../data/achievements';
-import { Award, Mail, MapPin, User, Github, Linkedin, FileText, Layout, Database, Terminal, ShieldAlert } from 'lucide-react';
+import { Award, Mail, User, Github, Linkedin, FileText, Layout, Database, Terminal, ShieldAlert } from 'lucide-react';
 
 export const Home: React.FC = () => {
   return (

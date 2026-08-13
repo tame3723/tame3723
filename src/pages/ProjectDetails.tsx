@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { ArrowLeft, Github, ExternalLink, Cpu, Database, AlertCircle, Award, BookOpen, Lightbulb, CheckCircle2, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink, Cpu, Database, AlertCircle, Award, BookOpen, Lightbulb, CheckCircle2} from 'lucide-react';
 import { projectsData } from '../data/projects';
 import { Button } from '../components/Button';
 
