@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Award, Calendar, ChevronRight } from 'lucide-react';
+import { GraduationCap, Calendar, ChevronRight } from 'lucide-react';
 import { IEducationExtended } from '../data/types';
 
 interface EducationCardProps {

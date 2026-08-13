@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom'; // Removed unused 'Link'
 import { ArrowLeft, Github, ExternalLink, Cpu, Database, AlertCircle, Award, BookOpen, Lightbulb } from 'lucide-react';
 import { projectsData } from '../data/projects';
 import { Button } from '../components/Button';
@@ -49,7 +49,7 @@ export const ProjectDetails: React.FC = () => {
               <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-brand-textPrimary">
                 {project.name}
               </h1>
-              <p className="text-base md:text-lg text-brand-textMuted leading-relaxed max-w-3xl">
+              <p className="text-base md:text-lg text-brand-textSecondary leading-relaxed max-w-3xl">
                 {project.shortDescription}
               </p>
             </div>
@@ -92,7 +92,7 @@ export const ProjectDetails: React.FC = () => {
                 <AlertCircle size={16} />
                 Problem Statement
               </h3>
-              <p className="text-sm text-brand-textMuted leading-relaxed">
+              <p className="text-sm text-brand-textSecondary leading-relaxed">
                 {project.problem}
               </p>
             </div>
@@ -101,7 +101,7 @@ export const ProjectDetails: React.FC = () => {
                 <Lightbulb size={16} />
                 Motivation
               </h3>
-              <p className="text-sm text-brand-textMuted leading-relaxed">
+              <p className="text-sm text-brand-textSecondary leading-relaxed">
                 {project.motivation}
               </p>
             </div>
@@ -113,7 +113,7 @@ export const ProjectDetails: React.FC = () => {
               <Cpu size={16} />
               System Solution
             </h3>
-            <p className="text-sm text-brand-textMuted leading-relaxed">
+            <p className="text-sm text-brand-textSecondary leading-relaxed">
               {project.solution}
             </p>
 
@@ -148,7 +148,7 @@ export const ProjectDetails: React.FC = () => {
                   <div className="text-xs font-semibold text-brand-accent bg-brand-accent/10 border border-brand-accent/20 px-2.5 py-1 rounded">
                     0{index + 1}
                   </div>
-                  <p className="text-sm text-brand-textMuted leading-relaxed">
+                  <p className="text-sm text-brand-textSecondary leading-relaxed">
                     {challenge}
                   </p>
                 </li>
@@ -183,7 +183,7 @@ export const ProjectDetails: React.FC = () => {
                 <BookOpen size={16} />
                 Lessons Learned
               </h3>
-              <p className="text-sm text-brand-textMuted leading-relaxed">
+              <p className="text-sm text-brand-textSecondary leading-relaxed">
                 {project.lessonsLearned}
               </p>
             </div>
@@ -192,7 +192,7 @@ export const ProjectDetails: React.FC = () => {
                 <Cpu size={16} />
                 Future Improvements
               </h3>
-              <p className="text-sm text-brand-textMuted leading-relaxed">
+              <p className="text-sm text-brand-textSecondary leading-relaxed">
                 {project.futureImprovements}
               </p>
             </div>
